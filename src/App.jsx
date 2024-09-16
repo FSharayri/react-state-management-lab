@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+
 
 import './App.css'
 
@@ -127,8 +127,8 @@ const App = () => {
     </ul>
     <h3>Fighters</h3>
     <ul>
-      {zombieFighters.map(zombieFighter=>
-        <li>
+      {zombieFighters.map((zombieFighter,idx)=>
+        <li key={idx}>
           <img src={zombieFighter.img} alt="" />
           <h2>name : {zombieFighter.name}</h2>
           <h3>price : {zombieFighter.price}</h3>
